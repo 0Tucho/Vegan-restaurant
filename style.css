@@ -45,6 +45,7 @@ header .container{
   margin-bottom: 50px;
   cursor: pointer;
   font-weight: 600;
+  outline: none;
 }
 .container__button:hover{
   background-color: limegreen;
@@ -59,21 +60,21 @@ header .container{
 }
 main{
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 3fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr 2fr;
   margin-top: 30px;
   place-self: center;
 }
-.main__title{
+.main__services__title{
   text-align: center;
   place-self: center;
-  grid-area: 1 / 1 / 2 / 2;
+  grid-area: 1 / 2 / 2 / 3;
   margin: 30px 0px;
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
   
-.main__photos{
-  grid-area: 2 / 1 / 3 / 2;
+.main__services__photos{
+  grid-area: 2 / 1 / 3 / 4;
   width: 85%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   height: 550px;
@@ -137,4 +138,42 @@ main{
 }
 .photos__main:hover{
   opacity: 100%;
+}
+.main__menu__title{
+  grid-area: 3 / 2 / 4 / 3 ;
+  text-align: center;
+  place-self: center;
+  margin: 30px 0px;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.main__menu__photos{
+  grid-area: 4 / 1 / 5 / 4;
+  display: grid;
+  grid-template-areas: 'one two three four five';
+  width: 85%;
+  place-self: center;
+  place-items: center;
+  place-content: space-between;
+  border: 2px solid #333;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+  padding: 30px 30px;
+}
+.menu__photos--all{
+  width: 100px;
+  height: 100px;
+}
+.menu__photos--one{
+  grid-area: one;
+}
+.menu__photos--two{
+  grid-area: two;
+}
+.menu__photos--three{
+  grid-area: three;
+}
+.menu__photos--four{
+  grid-area: four;
+}
+.menu__photos--five{
+  grid-area: five;
 }
